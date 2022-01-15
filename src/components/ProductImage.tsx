@@ -22,7 +22,7 @@ export const ProductImage = ({ image = "", className }: ProductImageProps) => {
     <img
       className={`${styles.productImg} ${className}`}
       src={imageToShow}
-      alt={`${product.title} - ${product.id}`}
+      alt={`${ !!product ? product.title : ''} - ${!!product ? product.id : ''}`}
     />
   );
 };
